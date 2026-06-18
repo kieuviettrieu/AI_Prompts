@@ -1,208 +1,320 @@
-# Prompts
+# AI Prompts for Software Engineers
 
-This folder contains reusable AI prompts that support the daily workflow of a Software Engineer.
+A collection of reusable AI prompts designed to support daily software engineering activities.
 
-The prompts are technology-agnostic and can be used with:
+These prompts are technology-agnostic and can be used with:
 
-* GitHub Copilot Chat
-* GitHub Copilot Agent
-* Cursor AI
-* ChatGPT
-* Claude
-* Any AI coding assistant
+- GitHub Copilot
+- ChatGPT
+- Claude
+- Gemini
+- Cursor
+- Windsurf
+- Any AI coding assistant
 
----
+The goal is to improve:
 
-## Folder Structure
-
-```text
-Prompts/
-├── 01-requirement-analysis.md
-├── 02-feature-implementation.md
-├── 03-bug-fix.md
-├── 04-code-analysis.md
-└── 05-code-review.md
-```
+- Requirement understanding
+- Feature implementation quality
+- Bug fixing efficiency
+- Code review quality
+- Risk identification
+- Self-validation before QA
+- Overall development productivity
 
 ---
+
+# Prompt List
 
 ## 01 - Requirement Analysis
 
+File:
+
+```text
+01-requirement-analysis.md
+```
+
 Purpose:
 
-Analyze requirements before implementation.
+Analyze and break down requirements before implementation.
 
-Use this prompt to:
+Output:
 
-* Understand business requirements
-* Identify business rules
-* Identify validation rules
-* Discover missing requirements
-* Identify edge cases
-* Generate acceptance criteria
-* Clarify assumptions
+- Business requirements
+- Business rules
+- Validation rules
+- Acceptance criteria
+- Assumptions
+- Missing requirements
+- Edge cases
+- Impact analysis
 
 Recommended Usage:
 
-* New task
-* User story refinement
-* Requirement clarification
-* Sprint planning
+Before starting any development task.
 
 ---
 
 ## 02 - Feature Implementation
 
+File:
+
+```text
+02-feature-implementation.md
+```
+
 Purpose:
 
-Implement a new feature or enhancement using existing project patterns.
+Implement new features following the existing codebase architecture and patterns.
 
-Use this prompt to:
+Output:
 
-* Analyze existing implementation
-* Identify impacted files
-* Understand dependencies
-* Create implementation plans
-* Generate code changes
-* Minimize regression risk
+- Requirement analysis
+- Existing implementation analysis
+- Impact analysis
+- Edge cases
+- Implementation plan
+- Code changes
+- Risks
+- Test recommendations
 
 Recommended Usage:
 
-* New feature development
-* Feature enhancement
-* Change requests
+When developing new functionality.
 
 ---
 
 ## 03 - Bug Fix
 
+File:
+
+```text
+03-bug-fix.md
+```
+
 Purpose:
 
-Investigate and fix defects safely.
+Analyze and safely fix bugs while minimizing regression risk.
 
-Use this prompt to:
+Output:
 
-* Perform root cause analysis
-* Analyze affected flows
-* Identify impacted files
-* Assess regression risks
-* Generate safe code changes
-* Create verification steps
+- Root cause analysis
+- Existing flow analysis
+- Risk assessment
+- Fix strategy
+- Code changes
+- Verification steps
+- Regression test recommendations
 
 Recommended Usage:
 
-* QA defects
-* Development bugs
-* Production issues
-* Regression bugs
+When investigating and fixing defects.
 
 ---
 
 ## 04 - Code Analysis
 
+File:
+
+```text
+04-code-analysis.md
+```
+
 Purpose:
 
-Understand existing code before making changes.
+Understand an existing component, module, feature, or business flow.
 
-Use this prompt to:
+Output:
 
-* Understand component responsibilities
-* Understand business flows
-* Identify dependencies
-* Discover hidden business logic
-* Analyze current architecture
-* Reduce onboarding time
+- Architecture overview
+- Execution flow
+- Business logic flow
+- Validation flow
+- Dependencies
+- Data flow
+- Potential risks
 
 Recommended Usage:
 
-* Legacy code investigation
-* New team onboarding
-* Impact analysis
-* Feature enhancement
+When working with unfamiliar code.
 
 ---
 
 ## 05 - Code Review
 
+File:
+
+```text
+05-code-review.md
+```
+
 Purpose:
 
-Review implementation quality before merge.
+Perform a professional code review and identify issues before creating a pull request.
 
-Use this prompt to:
+Output:
 
-* Identify bugs
-* Review business logic
-* Review edge cases
-* Review security concerns
-* Review performance concerns
-* Review maintainability
-* Identify technical debt
+- Code quality findings
+- Logic issues
+- Maintainability concerns
+- Performance concerns
+- Security concerns
+- Best practice recommendations
+- Suggested improvements
 
 Recommended Usage:
 
-* Self-review
-* Pull request review
-* Pre-merge validation
+Before opening a PR or requesting peer review.
 
 ---
 
-## Recommended Workflow
+## 06 - Test and Risk Analysis
 
-### New Feature
+File:
 
-1. 01-requirement-analysis.md
-2. 04-code-analysis.md
-3. 02-feature-implementation.md
-4. 05-code-review.md
-5. Testing
-6. Pull Request
-
----
-
-### Bug Fix
-
-1. 03-bug-fix.md
-2. 04-code-analysis.md
-3. Fix Implementation
-4. 05-code-review.md
-5. Testing
-6. Pull Request
-
----
-
-### Existing Code Investigation
-
-1. 04-code-analysis.md
-2. Requirement Analysis
-3. Implementation
-4. Review
-
----
-
-## Best Practices
-
-* Always provide sufficient context.
-* Include related requirements.
-* Include relevant code snippets.
-* Include logs and error messages when debugging.
-* Ask AI to explain reasoning before generating code.
-* Validate generated output before applying changes.
-* Review all generated code before merging.
-
----
-
-## Philosophy
-
-AI should be used as an Engineering Assistant, not as a replacement for engineering judgment.
-
-The engineer remains responsible for:
-
-* Requirement understanding
-* Architecture decisions
-* Code quality
-* Security
-* Testing
-* Production readiness
-
+```text
+06-test-and-risk-analysis.md
 ```
+
+Purpose:
+
+Validate implementation against requirements and identify missing logic, missing scenarios, edge cases, and potential risks before QA testing.
+
+Output:
+
+- Requirement coverage analysis
+- Missing business rules
+- Missing validations
+- Missing scenarios
+- Edge cases
+- Potential bugs
+- Risk analysis
+- Recommended fixes
+- QA readiness assessment
+
+Recommended Usage:
+
+After development is completed and before handing over to QA.
+
+Workflow:
+
+```text
+Requirement
+        ↓
+Implementation
+        ↓
+Test & Risk Analysis
+        ↓
+Fix Findings
+        ↓
+QA Testing
 ```
+
+---
+
+## 07 - Self Review and Fix
+
+File:
+
+```text
+07-self-review-and-fix.md
+```
+
+Purpose:
+
+Perform a complete self-review cycle and continuously improve the implementation until all identified issues are resolved or no safe fix is possible.
+
+Output:
+
+- Requirement verification
+- Scenario generation
+- Failure detection
+- Root cause analysis
+- Safe fix strategy
+- Code changes
+- Regression verification
+- Re-verification loop
+- Merge readiness assessment
+
+Recommended Usage:
+
+Before creating a PR or before submitting code for review.
+
+Workflow:
+
+```text
+Requirement
+        ↓
+Implementation
+        ↓
+Self Review
+        ↓
+Identify Issues
+        ↓
+Apply Safe Fixes
+        ↓
+Re-Review
+        ↓
+Ready for PR
+```
+
+---
+
+# Recommended Development Workflow
+
+For most development tasks:
+
+```text
+01 Requirement Analysis
+        ↓
+02 Feature Implementation
+        ↓
+06 Test and Risk Analysis
+        ↓
+07 Self Review and Fix
+        ↓
+05 Code Review
+        ↓
+Create Pull Request
+        ↓
+QA Testing
+```
+
+For bug fixing:
+
+```text
+03 Bug Fix
+        ↓
+06 Test and Risk Analysis
+        ↓
+07 Self Review and Fix
+        ↓
+Create Pull Request
+```
+
+For understanding existing code:
+
+```text
+04 Code Analysis
+        ↓
+05 Code Review
+        ↓
+Implement Changes
+```
+
+---
+
+# Notes
+
+These prompts are intentionally technology-independent.
+
+They focus on:
+
+- Software engineering principles
+- Business requirements
+- Risk reduction
+- Maintainability
+- Code quality
+- Safe implementation practices
+
+The prompts should be adapted to your project's architecture, coding standards, and development workflow.
